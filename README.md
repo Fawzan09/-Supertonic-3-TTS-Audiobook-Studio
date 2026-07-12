@@ -93,7 +93,7 @@ Note that this notebook (the workflow, forms, and code wrapping the model) is a 
 ---
 
 
-## Notebool : https://buymeacoffee.com/fawzan/e/556321
+## Notebook : https://buymeacoffee.com/fawzan/e/556321
 
 ---
 
