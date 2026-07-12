@@ -91,7 +91,12 @@ This notebook is built on the **open-weight Supertonic 3** model and reference t
 Note that this notebook (the workflow, forms, and code wrapping the model) is a separate work from the underlying Supertonic model itself, which remains Supertone Inc.'s work under its own license above. Any audio you generate with this notebook is subject to the OpenRAIL-M terms — particularly around consent for voice likeness and prohibited uses.
 
 ---
+
+
 ## Notebool : (https://buymeacoffee.com/fawzan/e/556321)
+
+---
+
 ## 🔒 Terms of use for buyers
 
 Purchasing access to this notebook gives you a **personal-use license to use it** — it does not give you the right to resell, redistribute, or repackage it.
