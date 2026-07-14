@@ -6,23 +6,7 @@ A no-code notebook that turns [Supertonic 3](https://github.com/supertone-inc/su
 
 ---
 
-## 📦 Two editions — pick the one that fits you
-
-| | **Colab Edition** | **Local / VS Code Edition** |
-|---|---|---|
-| File | `Supertonic_3_TTS_Audiobook_Studio.ipynb` | `Supertonic_3_TTS_Audiobook_Studio_LOCAL.ipynb` |
-| Runs on | Google Colab (in your browser, free) | Your own PC (VS Code's Jupyter extension, JupyterLab, or classic Jupyter) |
-| Forms | Colab's `#@param` forms | `ipywidgets` (buttons, dropdowns, sliders) |
-| File uploads | Colab's browser upload dialog | Your OS's native file picker |
-| Output files | Downloaded to your browser's Downloads folder | Saved straight to a local `supertonic_output` folder |
-| Session limits | Colab free-tier sessions can disconnect/reset | None — runs as long as you want, no idle timeout |
-| Setup | Nothing to install locally | Needs Python, ffmpeg, and (ideally) tkinter installed first |
-
-Both editions have the exact same 15 features and the same underlying logic — pick Colab if you want zero local setup, pick Local if you want no session limits and files landing directly on your own disk.
-
----
-
-## ✨ What's inside (both editions)
+## ✨ What's inside
 
 | # | Cell | What it does |
 |---|------|---------------|
@@ -55,23 +39,6 @@ Both editions have the exact same 15 features and the same underlying logic — 
 
 ---
 
-## 💻 Getting started — Local / VS Code Edition
-
-1. Install **Python 3.10–3.12**, plus the **Jupyter extension** in VS Code (or JupyterLab / classic Jupyter).
-2. Install **ffmpeg** and make sure it's on your system `PATH`:
-   - **Windows:** `choco install ffmpeg` (or download from ffmpeg.org and add it to PATH)
-   - **macOS:** `brew install ffmpeg`
-   - **Linux:** `sudo apt install ffmpeg` (or your distro's equivalent)
-3. Make sure **tkinter** is available (used for the native file-picker dialogs):
-   - Windows/macOS: bundled with the standard Python installer — usually nothing to do.
-   - Linux: `sudo apt install python3-tk` if it's missing. (If it's ever unavailable at runtime, the notebook falls back to asking for a typed file path instead of crashing.)
-4. Open `Supertonic_3_TTS_Audiobook_Studio_LOCAL.ipynb` and run **Cell 1 (Setup)** first — it installs the remaining Python packages and loads the model.
-5. Every other cell shows buttons/dropdowns/sliders — click through them the same way as the Colab edition. File pickers open your OS's native dialog; output lands in a `supertonic_output` folder created next to the notebook.
-
-**GPU not required.** The API Server cell (13) is actually a bit nicer locally than on Colab — no session time limit, so it can stay running as long as you want.
-
----
-
 ## 🌟 Want a custom voice that actually sounds like you (or your character)?
 
 The built-in voices (M1–M5, F1–F5) are great out of the box, but Cell 3 also plugs into **[Custom Voice Style Trainer for Supertonic 3](https://github.com/Fawzan09/voice-builder-for-supertonic-3)** — a companion notebook that trains a voice style from a **1–3 minute reference recording** instead of a quick 30-second sample, for a noticeably closer match.
@@ -93,7 +60,6 @@ The built-in voices (M1–M5, F1–F5) are great out of the box, but Cell 3 also
 - **Custom voices aren't cloned from raw audio by default.** Supertonic 3's open-weight package doesn't include a voice-cloning pipeline out of the box — see the callout above, or use [Supertone's free Voice Builder](https://supertonic.supertone.ai/voice-builder) for a quick 30-second option.
 - **The Voice AI API Server's public tunnel is temporary by design.** Any public URL it generates (via a free Cloudflare tunnel) only works while the notebook session stays open — great for testing, not for permanent production use.
 - **Re-running Cells 13/14 is safe.** They automatically clean up any server left running from a previous run in the same session, so you don't need to manually stop things first.
-- **(Local only) Buttons keep working even if you run cells out of order or re-run them.** Each cell's output area is independent, so clicking an earlier cell's button after running later ones still shows its result in the right place.
 
 ---
 
